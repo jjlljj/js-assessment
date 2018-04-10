@@ -26,12 +26,22 @@ exports.stringsAnswers = {
     },[]).join('\n')
   },
 
-  // solve this recursively!
-  reverseString: function(str) {
-    const split = str.split('')
+  //iterative 
+  //reverseString: function(str) {
+    //const split = str.split('')
 
-    return split.reduce((acc, char) => {
-      return char + acc
-    }, [])
+    //return split.reduce((acc, char) => {
+      //return char + acc
+    //}, [])
+  //}
+  
+  //recursive
+  reverseString: function(str) {
+    if (!str) return ''
+
+    let char = str[0]
+    let substr = str.substring(1, str.length)
+
+    return this.reverseString(substr) + char
   }
 };
