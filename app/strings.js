@@ -27,6 +27,10 @@ exports.stringsAnswers = {
   },
 
   reverseString: function(str) {
+    const split = str.split('')
 
+    return split.reduce((acc, char) => {
+      return [char, ...acc]
+    }, []).join('')
   }
 };
