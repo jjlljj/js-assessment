@@ -8,8 +8,8 @@ exports.stringsAnswers = {
       if (chars[idx+amount] === char) {
         return acc
       }
-      return [...acc, char]
-    }, []).join('')
+      return acc + char
+    }, '')
   },
 
   wordWrap: function(str, cols) {
@@ -26,11 +26,12 @@ exports.stringsAnswers = {
     },[]).join('\n')
   },
 
+  // solve this recursively!
   reverseString: function(str) {
     const split = str.split('')
 
     return split.reduce((acc, char) => {
-      return [char, ...acc]
-    }, []).join('')
+      return char + acc
+    }, [])
   }
 };
