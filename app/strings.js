@@ -32,7 +32,7 @@ exports.stringsAnswers = {
 
     //return split.reduce((acc, char) => {
       //return char + acc
-    //}, [])
+    //}, '')
   //}
   
   //recursive
